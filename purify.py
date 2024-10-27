@@ -11,6 +11,8 @@ import os
 import argparse
 from torchvision import transforms as tfs
 
+ANLS_Trial_Samples = 500
+
 class test_loader(Dataset):
     def __init__(self,path) -> None:
         super().__init__()
@@ -74,6 +76,7 @@ def defense(input_path,pretrained_path,save_path,noise_level):
 
         return img_reconstruct
     
+    batch_size=50
     testloader=DataLoader(dataset=test_loader(path=input_path),batch_size=50,shuffle=True,num_workers=1,pin_memory=False)
 
     for i,batch in enumerate(testloader):
@@ -86,6 +89,9 @@ def defense(input_path,pretrained_path,save_path,noise_level):
             img_reconstruct=imgs_reconstruct[n,:,:,:].unsqueeze(0)
             reconstructed_img=show(img_reconstruct)
             reconstructed_img.save(f'{save_path}/{sample_image_names[n].split("_adv")[0]}_reconstructed.png')
+
+        if (i+1)*batch_size > ANLS_Trial_Samples:
+            break # Set 500 as the trial samples, to facilitate the ANLS computation.
 
 
 if __name__=="__main__":
