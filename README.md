@@ -2,7 +2,7 @@
 <h1>UAD-RS </h1>
 <h3>UAD-RS: Universal adversarial defense in remote sensing based on pre-trained denoising diffusion models</h3>
 
-[Weikang Yu](https://ericyu97.github.io/)<sup>1,2</sup>, [Yonghao Xu](https://xkzhang.info/)<sup>3</sup>, [Pedram Ghamisi](https://www.ai4rs.com/)<sup>2,4</sup>
+[Weikang Yu](https://ericyu97.github.io/)<sup>1,2</sup>, [Yonghao Xu](https://yonghaoxu.github.io/)<sup>3</sup>, [Pedram Ghamisi](https://www.ai4rs.com/)<sup>2,4</sup>
 
 <sup>1</sup> Technical University of Munich, <sup>2</sup> Helmholtz-Zentrum Dresden-Rossendorf (HZDR), <sup>3</sup> Linköping University, <sup>4</sup> Lancaster University
 
